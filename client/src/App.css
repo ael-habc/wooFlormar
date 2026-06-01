@@ -1,0 +1,370 @@
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  background:
+    radial-gradient(circle at top left, rgba(216, 171, 106, 0.24), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(22, 106, 96, 0.18), transparent 24%),
+    #f5efe6;
+  color: #1f2624;
+}
+
+.sidebar {
+  padding: 28px 22px;
+  border-right: 1px solid rgba(31, 38, 36, 0.08);
+  background: rgba(252, 249, 243, 0.82);
+  backdrop-filter: blur(12px);
+}
+
+.login-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(216, 171, 106, 0.24), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(22, 106, 96, 0.18), transparent 24%),
+    #f5efe6;
+  color: #1f2624;
+}
+
+.login-card {
+  width: min(100%, 460px);
+  padding: 32px;
+  border-radius: 28px;
+  background: rgba(255, 252, 247, 0.92);
+  border: 1px solid rgba(31, 38, 36, 0.08);
+  box-shadow: 0 18px 50px rgba(31, 38, 36, 0.06);
+}
+
+.login-card h1,
+.brand h1,
+.hero-panel h2,
+.panel-head h3 {
+  margin: 0;
+  font-family: inherit;
+  letter-spacing: -0.03em;
+}
+
+.login-card h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-top: 8px;
+}
+
+.login-copy {
+  margin: 12px 0 0;
+  color: #60706b;
+}
+
+.login-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.login-help {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(31, 38, 36, 0.08);
+}
+
+.login-help p {
+  margin: 8px 0 0;
+}
+
+.brand h1 {
+  font-size: 2.2rem;
+}
+
+.eyebrow,
+.section-title,
+.meta-label,
+.workflow-card span,
+.log-entry span {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.74rem;
+}
+
+.subtle,
+.hero-copy,
+.panel-head p,
+.field small,
+.workflow-card span,
+.empty-state span {
+  color: #60706b;
+}
+
+.sidebar-section {
+  margin-top: 28px;
+}
+
+.workflow-list {
+  display: grid;
+  gap: 12px;
+}
+
+.workflow-card {
+  width: 100%;
+  text-align: left;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(31, 38, 36, 0.1);
+  background: rgba(255, 255, 255, 0.86);
+  display: grid;
+  gap: 8px;
+}
+
+.workflow-card.selected {
+  border-color: rgba(22, 106, 96, 0.34);
+  box-shadow: 0 16px 32px rgba(31, 38, 36, 0.08);
+}
+
+.workflow-card strong {
+  font-size: 1rem;
+}
+
+.signed-in-as {
+  margin-top: 10px;
+  word-break: break-word;
+}
+
+.main-panel {
+  padding: 28px;
+}
+
+.hero-panel,
+.panel {
+  border-radius: 28px;
+  background: rgba(255, 252, 247, 0.86);
+  border: 1px solid rgba(31, 38, 36, 0.08);
+  box-shadow: 0 18px 50px rgba(31, 38, 36, 0.06);
+}
+
+.hero-panel {
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.hero-panel h2 {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.hero-copy {
+  max-width: 52rem;
+  font-size: 1.02rem;
+}
+
+.hero-meta {
+  min-width: 220px;
+}
+
+.hero-meta p {
+  margin: 8px 0 0;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.content-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 24px;
+}
+
+.panel {
+  padding: 24px;
+}
+
+.panel-head {
+  margin-bottom: 18px;
+}
+
+.panel-head p {
+  margin: 8px 0 0;
+}
+
+.form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field span {
+  font-weight: 700;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"],
+.field input[type="date"],
+.field input[type="number"],
+.field input[type="file"],
+.field textarea,
+.field select {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(31, 38, 36, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 14px 16px;
+  font: inherit;
+  color: inherit;
+}
+
+.field textarea {
+  min-height: 138px;
+  resize: vertical;
+}
+
+.checkbox-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 48px;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.primary-button {
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0f5a53, #16776a);
+  color: #f8f4ee;
+  box-shadow: 0 14px 30px rgba(15, 90, 83, 0.22);
+}
+
+.primary-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  width: 100%;
+  padding: 13px 18px;
+  border: 1px solid rgba(31, 38, 36, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  color: inherit;
+}
+
+.download-list {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.download-card {
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 90, 83, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.download-card strong {
+  font-size: 0.96rem;
+}
+
+.download-card span {
+  color: #126651;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+}
+
+.log-list {
+  display: grid;
+  gap: 14px;
+  max-height: 620px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.log-entry {
+  padding: 16px;
+  border-radius: 18px;
+  background: #fbf8f3;
+  border: 1px solid rgba(31, 38, 36, 0.08);
+}
+
+.log-entry span {
+  color: #7b8882;
+}
+
+.log-entry pre {
+  margin: 10px 0 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: "Courier New", monospace;
+  font-size: 0.86rem;
+}
+
+.empty-state {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border: 1px dashed rgba(31, 38, 36, 0.16);
+  border-radius: 20px;
+}
+
+.empty-state.compact {
+  min-height: 120px;
+  margin-bottom: 22px;
+}
+
+.empty-state p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.error-text {
+  color: #982d22;
+}
+
+@media (max-width: 1080px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid rgba(31, 38, 36, 0.08);
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .main-panel,
+  .sidebar {
+    padding: 18px;
+  }
+
+  .hero-panel,
+  .panel {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .hero-panel {
+    display: grid;
+  }
+}
