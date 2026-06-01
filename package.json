@@ -3,7 +3,7 @@
     "dev": "node server/index.js",
     "dev:client": "npm --prefix client run dev",
     "dev:server": "node server/index.js",
-    "build:client": "npm --prefix client run build",
+    "build:client": "cd client && npm install && npm run build",
     "build": "npm run build:client",
     "app": "npm run build && node server/index.js",
     "start": "node server/index.js"
