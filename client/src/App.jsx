@@ -2,6 +2,16 @@ import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 
 const AUTH_STORAGE_KEY = "workflow-app-auth";
+const API_BASE_URL = String(import.meta.env.VITE_API_BASE_URL || "").trim().replace(/\/$/, "");
+
+function apiUrl(path) {
+  if (typeof path !== "string" || /^https?:\/\//i.test(path)) {
+    return path;
+  }
+
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  return API_BASE_URL ? `${API_BASE_URL}${normalizedPath}` : normalizedPath;
+}
 
 function buildInitialValues(workflow) {
   const values = {};
@@ -96,7 +106,7 @@ export default function App() {
   }
 
   async function authFetch(input, init = {}) {
-    const response = await fetch(input, {
+    const response = await fetch(apiUrl(input), {
       ...init,
       headers: {
         ...(init.headers || {}),
@@ -249,7 +259,7 @@ export default function App() {
       setLoginLoading(true);
       setLoginError("");
 
-      const response = await fetch("/api/auth/login", {
+      const response = await fetch(apiUrl("/api/auth/login"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -279,7 +289,7 @@ export default function App() {
   async function handleLogout() {
     try {
       if (auth?.token) {
-        await fetch("/api/auth/logout", {
+        await fetch(apiUrl("/api/auth/logout"), {
           method: "POST",
           headers: {
             "x-auth-token": auth.token,
